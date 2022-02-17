@@ -35,7 +35,7 @@ this.loadFromServer();
 return (
 <div>
 <h1 className="text-center"> Employees List</h1>
-<table style={this.state.mystyle}>
+<table>
 <thead>
 <tr>
 

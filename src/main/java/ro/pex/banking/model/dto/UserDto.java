@@ -24,6 +24,13 @@ public class UserDto {
 		return id;
 	}
 
+	@Override
+	public String toString() {
+		return "UserDto [id=" + id + ", lastName=" + lastName + ", firstName=" + firstName + ", username=" + username
+				+ ", password=" + password + ", phone=" + phone + ", email=" + email + ", dateOfBirth=" + dateOfBirth
+				+ "]";
+	}
+
 	public void setId(int id) {
 		this.id = id;
 	}

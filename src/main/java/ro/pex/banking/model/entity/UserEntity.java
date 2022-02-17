@@ -4,17 +4,12 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "user")
-public class UserEntity {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+public class UserEntity extends AbstractEntity {
+	
 	
 	@Column(name = "last_name", nullable = false)
 	private String lastName;
@@ -36,13 +31,7 @@ public class UserEntity {
 	@Column(name = "date_of_birth", nullable = false )
 	private LocalDate dateOfBirth;
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
+	
 
 	public String getLastName() {
 		return lastName;

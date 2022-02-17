@@ -28696,9 +28696,7 @@ var App = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
         className: "text-center"
-      }, " Employees List"), /*#__PURE__*/React.createElement("table", {
-        style: this.state.mystyle
-      }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, " Employe Id"), /*#__PURE__*/React.createElement("td", null, " Employe First Name"), /*#__PURE__*/React.createElement("td", null, " Employe Last Name"), /*#__PURE__*/React.createElement("td", null, " Employe Description"))), /*#__PURE__*/React.createElement("tbody", null, this.state.employees.map(function (employe) {
+      }, " Employees List"), /*#__PURE__*/React.createElement("table", null, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, " Employe Id"), /*#__PURE__*/React.createElement("td", null, " Employe First Name"), /*#__PURE__*/React.createElement("td", null, " Employe Last Name"), /*#__PURE__*/React.createElement("td", null, " Employe Description"))), /*#__PURE__*/React.createElement("tbody", null, this.state.employees.map(function (employe) {
         return /*#__PURE__*/React.createElement("tr", {
           key: employe.id
         }, /*#__PURE__*/React.createElement("td", null, " ", employe.id), /*#__PURE__*/React.createElement("td", null, " ", employe.firstName), /*#__PURE__*/React.createElement("td", null, " ", employe.lastName), /*#__PURE__*/React.createElement("td", null, " ", employe.email));
