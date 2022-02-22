@@ -1,2 +1,2 @@
 cd ..
-./mvnw spring-boot:run
+start mvnw spring-boot:run

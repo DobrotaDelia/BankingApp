@@ -1,74 +1,53 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-//import './app.css';
+import './app.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navigation from "./components/navigation/navigation";
+import Footer from "./components/footer/footer";
+import Home from "./components/home/home";
+import About from "./components/about/about";
+import Contact from "./components/contact/contact";
+import Blog from "./components/blog/blog";
+
+
+
+
 
 class App extends React.Component {
 
- constructor(props) {
-super(props);
-this.state = {
-employees: [],
-mystyle: {
-color: "white",
-backgroundColor: "DodgerBlue",
-padding: "10px",
-fontFamily: "Arial"
-}
-};
-}
 
- loadFromServer() {
-fetch("http://localhost:8080/banking-app/users")
-.then(res => res.json())
-.then(
-(data) => {
-this.setState({ employees: data });
 
- });
-}
+	constructor(props) {
+		super(props);
+	}
 
- componentDidMount() {
-this.loadFromServer();
-}
 
- render() {
-return (
-<div>
-<h1 className="text-center"> Employees List</h1>
-<table>
-<thead>
-<tr>
 
- <td> Employe Id</td>
-<td> Employe First Name</td>
-<td> Employe Last Name</td>
-<td> Employe Description</td>
-</tr>
+	componentDidMount() {
+	}
 
- </thead>
-<tbody>
-{
-this.state.employees.map(
-employe =>
-<tr key={employe.id}>
-<td> {employe.id}</td>
-<td> {employe.firstName}</td>
-<td> {employe.lastName}</td>
-<td> {employe.email}</td>
-</tr>
-)
-}
 
- </tbody>
-</table>
 
- </div>
+	render() {
+		return (
+			<Router>
+				<Navigation />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="/blog" element={<Blog />} />
+				</Routes>
+				<Footer />
+			</Router>
 
- )
-}
+
+
+		)
+	}
 }
 export default App;
 ReactDOM.render(
-<App />,
-document.getElementById('react')
+	<App />,
+	document.getElementById('react')
 )
