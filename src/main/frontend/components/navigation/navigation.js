@@ -40,7 +40,7 @@ class Navigation extends React.Component {
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><button type="button" onclick = "{sayHello}" class="btn btn-primary btn-small btn-nav">Log Out</button></li>
+						<li><button onClick={sayHello} type="button" class="btn btn-primary btn-small btn-nav">Log Out</button></li>
 					</ul>
 				</nav>
 			</div>

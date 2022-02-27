@@ -31107,7 +31107,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
     value: function loadFromServer() {
       var _this2 = this;
 
-      fetch("http://localhost:8080/banking-app/users").then(function (res) {
+      fetch("http://localhost:8080/banking-app/api/users").then(function (res) {
         return res.json();
       }).then(function (data) {
         _this2.setState({
@@ -31249,8 +31249,8 @@ var Navigation = /*#__PURE__*/function (_React$Component) {
       }, "Blog"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         "class": "nav navbar-nav navbar-right"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: sayHello,
         type: "button",
-        onclick: "{sayHello}",
         "class": "btn btn-primary btn-small btn-nav"
       }, "Log Out")))));
     }

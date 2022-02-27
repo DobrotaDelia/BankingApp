@@ -17,7 +17,7 @@ class Home extends React.Component {
 	}
 
 	loadFromServer() {
-		fetch("http://localhost:8080/banking-app/users")
+		fetch("http://localhost:8080/banking-app/api/users")
 			.then(res => res.json())
 			.then(
 				(data) => {

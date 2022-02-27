@@ -2,16 +2,22 @@ package ro.pex.banking.model.dto;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+
 public class UserDto {
 
+	@JsonIgnore
 	private int id;
 
 	private String lastName;
 
 	private String firstName;
 
+	@JsonIgnore
 	private String username;
 
+	@JsonIgnore
 	private String password;
 
 	private String phone;

@@ -15,7 +15,7 @@ import ro.pex.banking.model.dto.UserDto;
 import ro.pex.banking.service.UserService;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 public class UserController {
 	private Logger LOG = LogManager.getLogger(UserController.class);
 	@Autowired
