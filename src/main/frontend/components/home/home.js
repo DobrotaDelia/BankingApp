@@ -7,12 +7,7 @@ class Home extends React.Component {
 		super(props);
 		this.state = {
 			employees: [],
-			mystyle: {
-				color: "white",
-				backgroundColor: "DodgerBlue",
-				padding: "10px",
-				fontFamily: "Arial"
-			}
+
 		};
 	}
 
@@ -38,7 +33,7 @@ class Home extends React.Component {
 					<thead>
 						<tr>
 
-							<td> Employe Id</td>
+
 							<td> Employe First Name</td>
 							<td> Employe Last Name</td>
 							<td> Employe Description</td>
@@ -49,8 +44,7 @@ class Home extends React.Component {
 						{
 							this.state.employees.map(
 								employe =>
-									<tr key={employe.id}>
-										<td> {employe.id}</td>
+									<tr key={employe.email}>
 										<td> {employe.firstName}</td>
 										<td> {employe.lastName}</td>
 										<td> {employe.email}</td>

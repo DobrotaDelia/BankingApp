@@ -38,6 +38,12 @@ class Navigation extends React.Component {
 								Blog
 							</NavLink>
 						</li>
+						<li className="nav-item">
+							<NavLink className="nav-link" to="/login">
+								Login
+							</NavLink>
+						</li>
+						
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><button onClick={sayHello} type="button" class="btn btn-primary btn-small btn-nav">Log Out</button></li>

@@ -15,49 +15,36 @@ import ro.pex.banking.model.dto.LoginResponseDto;
 import ro.pex.banking.model.dto.UserDto;
 import ro.pex.banking.model.dto.response.ResponseDto;
 import ro.pex.banking.model.dto.response.StatusDto;
+import ro.pex.banking.model.dto.response.utils.ResponseUtils;
 import ro.pex.banking.service.UserService;
-
-
 
 @RestController
 @RequestMapping("/api/auth")
 public class ConnectionController {
 	private Logger logger = LogManager.getLogger(ConnectionController.class);
-	
+
 	@Autowired
 	private UserService userService;
 	
+	@RequestMapping(value = "/")
+	public String index() {
+	return "index";
+	}
+
 	@PostMapping("/login")
-	public ResponseEntity<ResponseDto> login (	@RequestBody LoginResponseDto loginResponseDto){
-		UserDto userDto=null;
+	public ResponseEntity<ResponseDto> login(@RequestBody LoginResponseDto loginResponseDto) {
+		UserDto userDto = null;
 		try {
-			userDto=userService.getUserByUsernameAndPassword(loginResponseDto.getUsername(), loginResponseDto.getPassword());
-		}
-		catch(WrongCredentialsException e){
-			ResponseDto responseDto=new ResponseDto();
-			StatusDto statusDto=new StatusDto();
-			statusDto.setHttpCode(404);
-			statusDto.setMessageDescription("Login not successfull");
-			statusDto.setMessageType("Error");
-			statusDto.setSuccess(false);
-			
-			responseDto.setStatus(statusDto);
-			responseDto.setContent(null);
-			return new ResponseEntity<ResponseDto>(responseDto,HttpStatus.NOT_FOUND);
+			userDto = userService.getUserByUsernameAndPassword(loginResponseDto.getUsername(),
+					loginResponseDto.getPassword());
+		} catch (WrongCredentialsException e) {
+
+			return ResponseUtils.error(HttpStatus.NOT_FOUND, "Login not successfull");
 
 		}
-		
-		ResponseDto responseDto=new ResponseDto();
-		StatusDto statusDto=new StatusDto();
-		statusDto.setHttpCode(200);
-		statusDto.setMessageDescription("Login successfully");
-		statusDto.setMessageType("Info");
-		statusDto.setSuccess(true);
-		
-		responseDto.setStatus(statusDto);
-		responseDto.setContent(userDto);
-		return new ResponseEntity<ResponseDto>(responseDto,HttpStatus.OK);
-		
+
+		return ResponseUtils.info(HttpStatus.OK, "Login successfully", userDto);
+
 	}
 
 }

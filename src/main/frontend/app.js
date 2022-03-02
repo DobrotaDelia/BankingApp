@@ -8,6 +8,8 @@ import Home from "./components/home/home";
 import About from "./components/about/about";
 import Contact from "./components/contact/contact";
 import Blog from "./components/blog/blog";
+import Login from "./components/login/login";
+
 
 
 
@@ -37,6 +39,8 @@ class App extends React.Component {
 					<Route path="/about" element={<About />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/blog" element={<Blog />} />
+					<Route path="/login" element={<Login />} />
+
 				</Routes>
 				<Footer />
 			</Router>
