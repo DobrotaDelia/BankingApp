@@ -9,6 +9,8 @@ import About from "./components/about/about";
 import Contact from "./components/contact/contact";
 import Blog from "./components/blog/blog";
 import Login from "./components/login/login";
+import Card from "./components/card/card";
+import { ReactNotifications } from 'react-notifications-component';
 
 
 
@@ -33,6 +35,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<Router>
+				<ReactNotifications />
 				<Navigation />
 				<Routes>
 					<Route path="/" element={<Home />} />
@@ -40,6 +43,7 @@ class App extends React.Component {
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/blog" element={<Blog />} />
 					<Route path="/login" element={<Login />} />
+					<Route path="/card" element={<Card />} />
 
 				</Routes>
 				<Footer />

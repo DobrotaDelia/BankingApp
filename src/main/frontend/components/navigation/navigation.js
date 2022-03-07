@@ -15,8 +15,8 @@ class Navigation extends React.Component {
 		return (
 			<div className="navigation">
 
-				<nav class="navbar navbar-dark bg-dark">
-					<ul class="nav justify-content-end">
+				<nav className="navbar navbar-dark bg-dark ">
+					<ul className="nav justify-content-end">
 						<li className="nav-item">
 							<NavLink className="nav-link" to="/">
 								Home
@@ -43,10 +43,15 @@ class Navigation extends React.Component {
 								Login
 							</NavLink>
 						</li>
+						<li className="nav-item">
+							<NavLink className="nav-link" to="/card">
+								card
+							</NavLink>
+						</li>
 						
 					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><button onClick={sayHello} type="button" class="btn btn-primary btn-small btn-nav">Log Out</button></li>
+					<ul className="nav navbar-nav navbar-right">
+						<li><button onClick={sayHello} type="button" className="btn btn-primary btn-small btn-nav">Log Out</button></li>
 					</ul>
 				</nav>
 			</div>

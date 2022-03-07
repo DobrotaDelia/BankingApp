@@ -1,8 +1,15 @@
 package ro.pex.banking.model.dto;
 
-public class LoginResponseDto {
+import javax.validation.constraints.NotBlank;
 
+import ro.pex.banking.i18n.MessagesKeys;
+
+public class LoginRequestDto {
+
+	@NotBlank(message=MessagesKeys.VALIDATION_LOGIN_USERNAME_NOTBLANK)
 	private String username;
+	
+	@NotBlank(message=MessagesKeys.VALIDATION_LOGIN_PASSWORD_NOTBLANK)
 	private String password;
 	
 	public String getUsername() {
