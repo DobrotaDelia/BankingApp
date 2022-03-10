@@ -1,4 +1,4 @@
-package ro.pex.banking.i18n;
+package ro.pex.banking.service.i18n;
 
 import java.util.Locale;
 

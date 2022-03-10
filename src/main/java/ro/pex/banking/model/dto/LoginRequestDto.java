@@ -2,7 +2,7 @@ package ro.pex.banking.model.dto;
 
 import javax.validation.constraints.NotBlank;
 
-import ro.pex.banking.i18n.MessagesKeys;
+import ro.pex.banking.service.i18n.MessagesKeys;
 
 public class LoginRequestDto {
 

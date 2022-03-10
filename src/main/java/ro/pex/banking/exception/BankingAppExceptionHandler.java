@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import ro.pex.banking.i18n.I18nService;
 import ro.pex.banking.model.dto.response.utils.ResponseUtils;
+import ro.pex.banking.service.i18n.I18nService;
 
 
 @ControllerAdvice
