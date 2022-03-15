@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./navigation.css";
+import { withTranslation } from 'react-i18next';
 
 class Navigation extends React.Component {
 
@@ -12,6 +13,7 @@ class Navigation extends React.Component {
 	}
 
 	render() {
+		const { t } = this.props;
 		return (
 			<div className="navigation">
 
@@ -19,7 +21,7 @@ class Navigation extends React.Component {
 					<ul className="nav justify-content-end">
 						<li className="nav-item">
 							<NavLink className="nav-link" to="/">
-								Home
+								{t('greetings')}
 								<span className="sr-only">(current)</span>
 							</NavLink>
 						</li>
@@ -48,6 +50,11 @@ class Navigation extends React.Component {
 								card
 							</NavLink>
 						</li>
+						<li className="nav-item">
+							<NavLink className="nav-link" to="/location">
+								location
+							</NavLink>
+						</li>
 						
 					</ul>
 					<ul className="nav navbar-nav navbar-right">
@@ -63,4 +70,4 @@ function sayHello() {
 	alert('You clicked me!');
 }
 
-export default Navigation;
+export default withTranslation()(Navigation);

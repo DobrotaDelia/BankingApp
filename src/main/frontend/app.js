@@ -11,7 +11,8 @@ import Blog from "./components/blog/blog";
 import Login from "./components/login/login";
 import Card from "./components/card/card";
 import { ReactNotifications } from 'react-notifications-component';
-
+import Googlemaps from "./components/googleMaps/googleMaps";
+import "./components/utils/i18n";
 
 
 
@@ -44,6 +45,8 @@ class App extends React.Component {
 					<Route path="/blog" element={<Blog />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/card" element={<Card />} />
+					<Route path="/location" element={<Googlemaps />} />
+
 
 				</Routes>
 				<Footer />
@@ -56,6 +59,8 @@ class App extends React.Component {
 }
 export default App;
 ReactDOM.render(
-	<App />,
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>,
 	document.getElementById('react')
 )

@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.css";
 import NotificationUtils from "../utils/notificationUtils.js";
+import FetchUtils from "../utils/fetchUtils.js";
 
 class Home extends React.Component {
 
@@ -18,7 +19,7 @@ class Home extends React.Component {
 	}
 
 	loadFromServer() {
-		fetch("http://localhost:8080/banking-app/api/users")
+		fetchUtils("http://localhost:8080/banking-app/api/users")
 			.then(res => res.json())
 			.then(
 				(data) => {
