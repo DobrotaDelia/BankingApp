@@ -68,6 +68,10 @@ public class ConnectionController {
 		
 	}
 
+	/**
+	 * Method - Test to check if an email can be send
+	 * @return void
+	 **/
 	private void testEmail() throws IOException, MessagingException, UnsupportedEncodingException {
 		EmailDto mail = new EmailDto();
 		mail.setFrom("dobrota.delia@gmail.com");

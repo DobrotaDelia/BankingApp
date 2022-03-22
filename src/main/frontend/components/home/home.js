@@ -2,6 +2,7 @@ import React from "react";
 import "./home.css";
 import NotificationUtils from "../utils/notificationUtils.js";
 import FetchUtils from "../utils/fetchUtils.js";
+import UrlConstants from "../utils/urlConstants.js";
 
 class Home extends React.Component {
 
@@ -19,7 +20,7 @@ class Home extends React.Component {
 	}
 
 	loadFromServer() {
-		fetchUtils("http://localhost:8080/banking-app/api/users")
+		FetchUtils.get(UrlConstants.API_GET_ALL_USERS_URL)
 			.then(res => res.json())
 			.then(
 				(data) => {

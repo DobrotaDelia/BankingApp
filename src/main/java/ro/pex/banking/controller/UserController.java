@@ -23,12 +23,17 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	/**
+	 * Method - Return list of users
+	 * @return ResponseEntity<List<UserDto>> - Return list of users
+	 **/
 	
 	@GetMapping
 	public ResponseEntity<List<UserDto>> getUsers() {
 		List<UserDto> users = userService.getAll();
 		LOG.info("List of users: " + users.toString());
-		return ResponseUtils.info(HttpStatus.OK, "blabla", users);
+		return ResponseUtils.info(HttpStatus.OK, "blabla", users);  //The Server issues an HTTP Status Code in response to a request of the client made to the server.
+		 
 	}
 
 }

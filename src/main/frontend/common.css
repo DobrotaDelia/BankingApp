@@ -1,0 +1,11 @@
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: #1D976C! important;
+}
+
+
+.nav-link {
+    
+    color: black! important;
+    
+}
