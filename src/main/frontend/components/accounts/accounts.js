@@ -22,17 +22,17 @@ class Accounts extends React.Component {
 				<nav className="navbar navbar-dark bg-dark ">
 					<ul className="nav justify-content-end">
 						<li className="nav-item">
-							<NavLink className="nav-link" to="/login">
+							<NavLink className="nav-link" to="/UserProfile">
 								Current Account
 							</NavLink>
 						</li>
 						<li className="nav-item">
-							<NavLink className="nav-link" to="/accounts">
+							<NavLink className="nav-link" to="/SavingsAccountInfo">
 								Savings Accounts
 							</NavLink>
 						</li>
 						<li className="nav-item">
-							<NavLink className="nav-link" to="/about">
+							<NavLink className="nav-link" to="/card">
 								Credit Accounts
 							</NavLink>
 						</li>

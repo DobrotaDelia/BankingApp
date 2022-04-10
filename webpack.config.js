@@ -9,6 +9,7 @@ module.exports = {
 		path: __dirname,
 		filename: './src/main/resources/static/built/bundle.js'
 	},
+	
 	module: {
 		rules: [
 			{
@@ -25,7 +26,40 @@ module.exports = {
 			{
 				test: /\.css$/i,
 				use: ["style-loader", "css-loader"],
-			}
+			},
+
+
+			{
+				test: /\.(png|jpe?g|gif)$/i,
+				use: [{
+					loader: 'file-loader',
+				},
+				]
+			},
+
+			{
+				test: /\.(png|jpg|gif)$/i,
+				use: [{
+					loader: 'url-loader',
+					options: {
+						limit: 8192,
+					},
+				},],
+			},
+
+			{
+				test: /\.(png|jpe?g|gif)$/,
+				options: {
+					name: 'static/media/[name].[hash:8].[ext]',
+					// publicPath: 'https://cdn.example.com/', // uncomment to override webpack public path
+					// esModule: true
+					scalings: { '@2x': 2, '@3x': 3 },
+				},
+				loader: 'react-native-web-image-loader',
+			},
+
+
+
 		]
 	}
 };

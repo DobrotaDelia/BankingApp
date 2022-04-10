@@ -13,8 +13,11 @@ import Card from "./components/card/card";
 import { ReactNotifications } from 'react-notifications-component';
 import Googlemaps from "./components/googleMaps/googleMaps";
 import "./components/utils/i18n";
-import UserProfile from "./components/UserProfile/UserProfile";
 import Accounts from "./components/accounts/accounts";
+import SavingsAccountInfo from "./components/SavingsAccountInfo/SavingsAccountInfo";
+import UserProfile from "./components/UserProfile/UserProfile";
+
+
 
 
 
@@ -51,6 +54,8 @@ class App extends React.Component {
 					<Route path="/card" element={<Card />} />
 					<Route path="/location" element={<Googlemaps />} />
 					<Route path="/accounts" element={<Accounts />} />
+					<Route path="/SavingsAccountInfo" element={<SavingsAccountInfo />} />
+					<Route path="/UserProfile" element={<UserProfile />} />
 
 
 
