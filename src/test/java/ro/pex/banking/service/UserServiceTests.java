@@ -31,12 +31,12 @@ public class UserServiceTests {
 	
 	}
 	
-	@Test
-	void whengetUserByUsernameAndPasswordThenResult() {
-		String username, password;
-		assertThat(userService.getUserByUsernameAndPassword(username, password), )); 	
-	
-	}
+//	@Test
+//	void whengetUserByUsernameAndPasswordThenResult() {
+//		String username, password;
+//		assertThat(userService.getUserByUsernameAndPassword(username, password), )); 	
+//	
+//	}
 	
 	
 }

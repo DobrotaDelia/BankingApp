@@ -20,10 +20,10 @@ public class UserConverterTests {
 	UserEntity userEntity;
 	
 
-	@Test
-	void whenconverToDtoMethodisCalledThenResultisNotNull() {
-		assertThat(userConverter.converToDto(userEntity), is(notNullValue())); 	
-	
-	}
+//	@Test
+//	void whenconverToDtoMethodisCalledThenResultisNotNull() {
+//		assertThat(userConverter.converToDto(userEntity), is(notNullValue())); 	
+//	
+//	}
 
 }

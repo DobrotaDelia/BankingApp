@@ -18,10 +18,10 @@ public class UserEntityTests {
 	@Autowired
 	private UserEntity userEntity;
 	
-	@Test
-	void whengetIdMethodIsCalledNotNull() {
-		assertThat(userEntity.getId(), is(notNullValue())); 	
-	
-	}
+//	@Test
+//	void whengetIdMethodIsCalledNotNull() {
+//		assertThat(userEntity.getId(), is(notNullValue())); 	
+//	
+//	}
 
 }
