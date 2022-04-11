@@ -9,7 +9,7 @@ public class LoginRequestDto {
 	@NotBlank(message=MessagesKeys.VALIDATION_LOGIN_USERNAME_NOTBLANK)
 	private String username;
 	
-	@NotBlank(message=MessagesKeys.VALIDATION_LOGIN_PASSWORD_NOTBLANK)
+	@NotBlank(message=MessagesKeys.VALIDATION_LOGIN_PASSWORD_NOTBLANK)  //suitable for tests
 	private String password;
 	
 	public String getUsername() {

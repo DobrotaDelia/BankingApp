@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class UserEntity extends AbstractEntity {
 	
 	
-	@Column(name = "last_name", nullable = false)
+	@Column(name = "last_name", nullable = false) //specifics for JPA
 	private String lastName;
 	
 	@Column(name = "first_name", nullable = false)
